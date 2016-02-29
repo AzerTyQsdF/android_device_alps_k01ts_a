@@ -47,13 +47,14 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 444596224
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x03f88000 --tags_offset 0x0df88000 
 
-#in case we want to build kernel from source
+## Kernel from source, maybe later :)
 #TARGET_KERNEL_SOURCE := kernel/alps/k01ts_a
 #TARGET_KERNEL_CONFIG := cyanogenmod_k01ts_a_defconfig
 
-#for now lets use prebuilt
+# Kernel from prebuilt
 TARGET_PREBUILT_KERNEL := device/alps/k01ts_a/prebuilt/kernel
 BOARD_HAS_NO_SELECT_BUTTON := true
+
 #recovery
 TARGET_RECOVERY_INITRC := device/alps/k01ts_a/recovery/init.mt6753.rc
 TARGET_RECOVERY_FSTAB := device/alps/k01ts_a/recovery/root/fstab.mt6753
@@ -77,40 +78,23 @@ WIFI_DRIVER_FW_PATH_P2P:=P2P
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_MTK := true
 BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/alps/k01ts_a/bluetooth
 
-#twrp ( WIP do not use!!! see comments )
+# RIL
+BOARD_CONNECTIVITY_VENDOR := MediaTek
+BOARD_USES_LEGACY_MTK_AV_BLOB := true
 
-#tw_theme is essential flag
-#TW_THEME := portrait_hdpi
+# GPS
+BOARD_GPS_LIBRARIES :=true
+BOARD_CONNECTIVITY_MODULE := conn_soc
+BOARD_MEDIATEK_USES_GPS := true
 
-#brightness settings (needs verification)
-#TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness/
-#TW_MAX_BRIGHTNESS := 255
+# AUDIO
+BOARD_USES_MTK_AUDIO := true
 
-#may be usefull if we get graphical glitches
-#RECOVERY_GRAPHICS_USE_LINELENGTH := true
-
-#in case of wrong color this needs modification
-#TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-
-#if sdcard0 is a /data/media emulated one
-#RECOVERY_SDCARD_ON_DATA := true
-
-#ntfs support? (needs much space..)
-#TW_INCLUDE_NTFS_3G := true
-
-#we may need that if sdcard0 dont work
-#TW_FLASH_FROM_STORAGE := true
-#TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-#TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-#TW_DEFAULT_EXTERNAL_STORAGE := true
-
-#only add if kernel supports
-#TW_INCLUDE_FUSE_EXFAT := true
-
-#F2FS support (only activate if kernel supports)
-#TARGET_USERIMAGES_USE_F2FS:=true
-
+# FM Radio
+MTK_FM_SUPPORT :=true
+MTK_FM_RX_SUPPORT :=true
 
 #Mediatek flags
 BOARD_HAS_MTK_HARDWARE := true
@@ -122,5 +106,3 @@ COMMON_GLOBAL_CPPFLAGS += -DMTK_HARDWARE -DMTK_AOSP_ENHANCEMENT
 USE_OPENGL_RENDERER := true
 BOARD_EGL_CFG := device/alps/k01ts_a/egl.cfg
 
-# Hack for build
-#$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)

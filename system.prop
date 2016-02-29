@@ -100,8 +100,8 @@ persist.radio.mobile.data=0,0
 ril.mux.debuglog.enable=1
 
 
-#ro.bt.name=Elephone P6000
-ro.wifi.name=Elephone P6000 Pro
+ro.bt.name=Elephone P6000 pro
+ro.wifi.name=Elephone P6000 pro
 ro.nb.root=1
 ro.adb.secure=0
 ro.debuggable=1
