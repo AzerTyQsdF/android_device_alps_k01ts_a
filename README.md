@@ -3,8 +3,8 @@ Device repo for Elephone p6000 pro CyanogenMod 12.1
 
 Work:
  * Boot
- * WiFi
- * BT
+ * Wifi
+ * Bluetooth
  * GPS
 
 TODO:
@@ -12,5 +12,5 @@ TODO:
  * Audio
  * Camera
  * MTP
- * Kernel From Source
+ * Kernel from source
  * Enforcing SELinux
