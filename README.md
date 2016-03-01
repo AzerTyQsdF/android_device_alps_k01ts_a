@@ -8,9 +8,12 @@ Work:
  * GPS
 
 TODO:
- * RIL
  * Audio
  * Camera
  * MTP
  * Kernel from source
  * Enforcing SELinux
+ * Telecomm: SMS / Calls / Networking
+ * FM Radio
+ * Cyanogen Recovery
+ * External SD
