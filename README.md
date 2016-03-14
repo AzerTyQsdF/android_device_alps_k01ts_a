@@ -11,10 +11,10 @@ Work:
  * GPS
  * MTP
  * Telecomm: SMS / Calls / Networking
+ * Audio
 
 TODO:
  * Camera
- * Audio
  * Kernel from source
  * Enforcing SELinux
  * Cyanogen Recovery
