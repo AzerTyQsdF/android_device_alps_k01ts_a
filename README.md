@@ -12,10 +12,9 @@ Work:
  * MTP
  * Telecomm: SMS / Calls / Networking
  * Audio
+ * External SD
 
 TODO:
  * Camera
  * Kernel from source
- * Enforcing SELinux
  * Cyanogen Recovery
- * External SD
