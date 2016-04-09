@@ -13,8 +13,8 @@ Work:
  * Telecomm: SMS / Calls / Networking
  * Audio
  * External SD
+ * Camera
 
 TODO:
- * Camera
  * Kernel from source
  * Cyanogen Recovery
